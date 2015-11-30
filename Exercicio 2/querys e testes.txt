@@ -1,0 +1,35 @@
+//QUERY:
+
+SELECT COUNT(DISTINCT Usuario.id) 
+	FROM Usuario, Compra 
+	WHERE Usuario.id = Compra.usuario_id 
+	AND DATE(momentoDaCompra) >= DATEADD(DAY,-30,CURDATE()) 
+	AND DATE(momentoDaCompra) <= DATEADD(DAY, -29, CURDATE())
+
+
+//TESTES - INSERTS
+DECLARE @TODAY DATE;
+SET @TODAY = DATEADD(DAY, -30, CURDATE();
+
+//Contar apenas usuarios distintos
+INSERT INTO Compra(usuario_id, valor, momentoDaCompra)
+	VALUES(1, 10.55, DATEADD(DAY, -30, @TODAY))
+
+INSERT INTO Compra(usuario_id, valor, momentoDaCompra)
+	VALUES(1, 10.55, DATEADD(DAY, -30, @TODAY))
+
+INSERT INTO Compra(usuario_id, valor, momentoDaCompra)
+	VALUES(2, 10.55, DATEADD(DAY, -30, @TODAY))
+
+INSERT INTO Compra(usuario_id, valor, momentoDaCompra)
+	VALUES(2, 10.55, DATEADD(DAY, -30, @TODAY))
+//
+
+//Garantir o período
+//Se retornar 2, rerou para o para mais. Se retornar 1, errou para menos. 3 para os dois.
+INSERT INTO Compra(usuario_id, valor, momentoDaCompra)
+	VALUES(3, 10.55, DATEADD(DAY, -31, @TODAY))
+INSERT INTO Compra(usuario_id, valor, momentoDaCompra)
+	VALUES(4, 10.55, DATEADD(DAY, -31, @TODAY))
+INSERT INTO Compra(usuario_id, valor, momentoDaCompra)
+	VALUES(5, 10.55, DATEADD(DAY, -28, @TODAY))

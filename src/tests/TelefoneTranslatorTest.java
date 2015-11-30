@@ -13,13 +13,13 @@ import features.TelefoneTranslator;
 public class TelefoneTranslatorTest {
 
 	private final String CASE_ALL			= "abcdefghijklmnopqrstuvwxyz-ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	private final String EXPECTED_ALL  		= "2223334445556667777888999922233344455566677778889999";
+	private final String EXPECTED_ALL		= "2223334445556667777888999922233344455566677778889999";
 	private final String CASE_DO_NOTHING	= "180025872";
 	private final String EXPECTED_DO_NOTHING= "180025872";
-	private final String CASE_MIX 			= "A1B-2-CbS-3h-8H5";
+	private final String CASE_MIX			= "A1B-2-CbS-3h-8H5";
 	private final String EXPECTED_MIX		= "212222734845";
-	private final String CASE_NOTHING 		= "";
-	private final String EXPECTED_NOTHING 	= "";
+	private final String CASE_NOTHING		= "";
+	private final String EXPECTED_NOTHING	= "";
 	private final String CASE_INPUT_ERR		= "AhS48S-!1@2#A$c%4¨h&7*8*()_+5´`[]~^ \tY\r\ng<,>.:w;?/{Z}ªº°dÇ¹²³4£¢¬4";
 	private final String EXPECTED_INPUT_ERR	= "2474871222447859499344";
 	
