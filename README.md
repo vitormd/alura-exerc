@@ -32,4 +32,6 @@ valor decimal(10,2), momentoDaCompra datetime
 
 Parte 1. Crie uma query select para trazer quantos usuários fizeram compras entre 30 e 29 dias atrás, independentemente de que dia é hoje. O resultado da query é um único número!
 
+<strong>Obs:</strong> Considerei o período como incluso
+
 Parte 2. Quais testes você faria para garantir que a query funciona exatamente como deveria? Escreva os INSERTs que faria e o resultado esperado para cada teste.
